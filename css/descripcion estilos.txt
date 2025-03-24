@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: Verdana, sans-serif; /* Cambia la fuente principal de la página */
+    /* Puedes cambiar la fuente por otra, como: font-family: 'Arial', sans-serif; */
+}
+
+/* Estilos del encabezado (header) */
+header {
+    background: #333; /* Color de fondo del encabezado */
+    padding: 10px 20px; /* Espaciado interno (arriba/abajo y izquierda/derecha) */
+    color: white; /* Color del texto en el encabezado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Puedes cambiar el color de fondo: background: #1a1a1a; */
+}
+
+/* Estilos del botón de menú en móvil */
+.menu-toggle {
+    font-size: 24px; /* Tamaño del ícono del menú */
+    cursor: pointer;
+    display: none; /* Oculta el botón en pantallas grandes */
+    color: white; /* Color del ícono del menú */
+    /* Puedes cambiar el color del ícono: color: #ffcc00; */
+}
+
+/* Estilos de la lista de navegación */
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex;
+}
+
+/* Estilos de los elementos de la lista de navegación */
+nav ul li {
+    position: relative;
+    margin: 0 10px; /* Espaciado entre elementos del menú */
+}
+
+/* Estilos de los enlaces del menú */
+nav ul li a {
+    color: white; /* Color del texto del menú */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    display: block;
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    /* Puedes cambiar el color del texto: color: #ffcc00; */
+}
+
+/* Estilos al pasar el mouse sobre los enlaces del menú */
+nav ul li a:hover {
+    background: #555; /* Color de fondo al pasar el mouse */
+    /* Puedes cambiar el color de fondo: background: #666; */
+}
+
+/* Estilos del submenú */
+.submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    background: #222; /* Color de fondo del submenú */
+    top: 100%;
+    left: 0;
+    min-width: 200px; /* Ancho mínimo del submenú */
+    list-style: none;
+    padding: 0;
+    border: 1px solid #555; /* Borde del submenú */
+    z-index: 10; /* Asegura que el submenú esté por encima de otros elementos */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    /* Puedes cambiar el color de fondo: background: #333; */
+}
+
+/* Estilos de los elementos del submenú */
+.submenu li {
+    border-bottom: 1px solid #555; /* Línea separadora entre elementos */
+    padding: 8px 15px; /* Espaciado interno de los elementos */
+    /* Puedes cambiar el color del borde: border-bottom: 1px solid #666; */
+}
+
+/* Quita la línea del último elemento del submenú */
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos de los enlaces del submenú */
+.submenu a {
+    color: white; /* Color del texto del submenú */
+    font-size: 14px; /* Tamaño de la fuente del submenú */
+    /* Puedes cambiar el color del texto: color: #ffcc00; */
+}
+
+/* Estilos al pasar el mouse sobre los enlaces del submenú */
+.submenu a:hover {
+    background: #666; /* Color de fondo al pasar el mouse */
+    /* Puedes cambiar el color de fondo: background: #777; */
+}
+
+/* Muestra el submenú cuando el elemento padre tiene la clase "active" */
+.submenu-parent.active .submenu {
+    display: block;
+}
+
+/* Estilos del texto en la barra superior en móvil */
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222; /* Color de fondo de la barra superior en móvil */
+    color: white; /* Color del texto en la barra superior */
+    padding: 15px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    height: 50px; /* Altura de la barra */
+    /* Puedes cambiar el color de fondo: background: #333; */
+}
+
+/* Estilos para los íconos de navegación */
+.nav-icons {
+    text-align: center;
+}
+
+/* Estilos para el contenedor de imágenes */
+.containerimg {
+    text-align: center;
+}
+
+/* Estilos para dispositivos móviles (ancho máximo de 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muestra el botón de menú en móvil */
+    }
+
+    /* Estilos del menú en móvil */
+    nav {
+        display: none; /* Oculta el menú por defecto en móvil */
+        flex-direction: column;
+        background: #444; /* Color de fondo del menú en móvil */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        transition: all 0.3s ease; /* Transición suave al mostrar/ocultar */
+        /* Puedes cambiar el color de fondo: background: #555; */
+    }
+
+    /* Estilos de la lista en móvil */
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Estilos de los elementos de la lista en móvil */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Muestra el menú cuando tiene la clase "active" */
+    nav.active {
+        display: flex;
+    }
+
+    /* Estilos del submenú en móvil */
+    .submenu {
+        position: static; /* Muestra el submenú debajo del ítem */
+        min-width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    /* Estilos de los enlaces del submenú en móvil */
+    .submenu a {
+        font-size: 14px; /* Tamaño de la fuente en móvil */
+    }
+
+    /* Estilos para los íconos de navegación en móvil */
+    .nav-icons {
+        display: flex;
+        justify-content: center;
+        gap: 60px; /* Espaciado entre íconos */
+        margin-top: 20px;
+    }
+
+    /* Estilos de las imágenes de los íconos */
+    .nav-icons img {
+        width: 40px; /* Tamaño de los íconos */
+        height: auto;
+        cursor: pointer;
+    }
+
+    /* Habilita el desplazamiento suave en la página */
+    html {
+        scroll-behavior: smooth;
+    }
+}

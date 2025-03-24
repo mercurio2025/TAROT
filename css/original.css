@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    background: #333;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background: #222;
+    top: 100%;
+    left: 0;
+    min-width: 200px; /* Ancho mínimo para que el submenú no sea demasiado estrecho */
+    list-style: none;
+    padding: 0;
+    border: 1px solid #555;
+    z-index: 10;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.submenu li {
+    border-bottom: 1px solid #555;
+    padding: 8px 15px;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu a {
+    color: white;
+    font-size: 14px; /* Reducimos el tamaño de la fuente para que quepa más texto */
+}
+
+.submenu a:hover {
+    background: #666;
+}
+
+.submenu-parent.active .submenu {
+    display: block;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
+}
+.nav-icons {
+    text-align: center;
+}
+.containerimg {
+    text-align: center;
+}
+body h1 {
+    color: #000000;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    text-align: center;
+    text-transform: uppercase;
+}
+body h2 {
+    color: #000000;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.parrafo {
+    color: #000000;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+body p {
+    color: #000000;
+    text-align: justify;
+    hyphens: auto; /* Activa la separación de sílabas automática */
+    letter-spacing: -0.02em;
+    word-spacing: -0.05em;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .submenu {
+        position: static; /* En móvil, el submenú se muestra debajo del ítem */
+        min-width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .submenu a {
+        font-size: 14px; /* Tamaño de fuente más pequeño para móviles */
+    }
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.nav-icons img {
+    width: 40px; /* Ajusta el tamaño según necesites */
+    height: auto;
+    cursor: pointer;
+}
+	html {
+  scroll-behavior: smooth;
+}
+
+}
